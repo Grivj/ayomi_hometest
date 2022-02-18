@@ -24,11 +24,11 @@ Open terminal in the folder
 docker-compose up -d
 docker-compose run web python manage.py migrate
 ```
-On ARM macbooks, both these commands may fail, running:
+On ARM macbooks, both these commands may fail, what worked for me was running:
 ```
 DOCKER_BUILDKIT=0
 ```
-in front of the commands may do the trick.
+in front of the commands.
 
 # URLs
 
