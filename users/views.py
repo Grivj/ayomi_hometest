@@ -1,13 +1,8 @@
-# Create your views here.
-import re
-
-from django.contrib import messages
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import UserCreationForm
 from django.http import JsonResponse
 from django.shortcuts import redirect, render
-from django.urls import reverse_lazy
 
 from .forms import UpdateEmailForm
 
@@ -33,7 +28,6 @@ def profile(request):
         form = UpdateEmailForm(request.POST, instance=request.user)
         if form.is_valid():
             form.save()
-            # messages.success(request, "Your email has been successfully updated.")
             new_email = form.cleaned_data.get("email")
             return JsonResponse(
                 {
