@@ -1,3 +1,7 @@
+<img width="900" alt="image" src="https://user-images.githubusercontent.com/4151401/154772567-95d85c9e-94b9-4968-a46e-2faddd0ae986.png">
+<img width="900" alt="image" src="https://user-images.githubusercontent.com/4151401/154772683-801fbfd1-1640-4d12-ad9c-9366cb43503c.png">
+
+
 # Ayomi's test
 My submission for Ayomi's home test
 
@@ -26,4 +30,17 @@ DOCKER_BUILDKIT=0
 ```
 in front of the commands may do the trick.
 
-## 
+# URLs
+
+- /            [default page](same as /register)
+- /login       [redirects to /profile once logged]
+- /register    [redirects to /profile once the user is created (and logged)]
+- /profile     [requires logged]
+
+# Users app
+
+- The app settings and files can be found under ./users/   
+- The somewhat tricky part was for the email's update using Ajax.
+    - The frontend's logic for the request is in ./users/static/users/main.js
+    - The backend's logic is in the view at ./users/views.py
+  
