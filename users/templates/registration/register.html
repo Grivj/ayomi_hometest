@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block content %}
+
+<form method="post" action="{% url 'register' %}">
+  {% csrf_token %} {% for field in form %}
+  <div class="form-group">
+    <input
+      type="{% if 'password' in field.label_tag %}password{% else %}text{% endif %}"
+      name="{{ field.html_name }}"
+      class="form-control"
+      maxlength="{% if 'username' in field.label_tag %}150{% endif %}"
+      id="{{ field.id_for_label }}"
+      placeholder="{{ field.html_name }}"
+      required
+    />
+  </div>
+  {% if field.errors %} {% for error in field.errors %}
+  <div class="alert alert-danger alert-dismissible" role="alert">
+    <strong>{{ error|escape }}</strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  {% endfor %} {% endif %} {% endfor %}
+  <button type="submit" class="btn-update-email">Register</button>
+</form>
+
+<a href="/login/" class="link"> Login </a>
+
+{% endblock %}

@@ -1,0 +1,61 @@
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
+  font-family: Segoe UI, Cascadia Code, sans-serif;
+  font-size: 18px;
+  -webkit-animation: rotate-background 8s ease-in-out infinite;
+  animation: rotate-background 8s ease-in-out infinite;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+}
+
+@keyframes rotate-background {
+  100% {
+    -webkit-backdrop-filter: hue-rotate(-45deg);
+    -moz-backdrop-filter: hue-rotate(-45deg);
+    -ms-backdrop-filter: hue-rotate(-45deg);
+    -webkit-backdrop-filter: hue-rotate(-45deg);
+    backdrop-filter: hue-rotate(-45deg);
+  }
+}
+
+@-webkit-keyframes rotate-background {
+  100% {
+    -webkit-backdrop-filter: hue-rotate(-45deg);
+    -moz-backdrop-filter: hue-rotate(-45deg);
+    -ms-backdrop-filter: hue-rotate(-45deg);
+    -webkit-backdrop-filter: hue-rotate(-45deg);
+    backdrop-filter: hue-rotate(-45deg);
+  }
+}
+
+.btn-update-email {
+  color: white;
+  margin: 20px 0;
+  padding: 12px 30px;
+  font-size: 20px;
+  border-radius: 30px;
+  border: none;
+  background: transparent;
+  box-shadow: -14px 14px 28px #d9d9d90d, 14px -14px 28px #ffffff1c;
+  transition-duration: 0.5s;
+}
+
+.btn-update-email:hover {
+  box-shadow: -14px 14px 28px #d9d9d94a, 14px -14px 28px #ffffff3c;
+}
+
+.link {
+  margin-top: 20px;
+  display: inline-block;
+  color: white;
+}
+
+.link:hover {
+  color: white;
+}
